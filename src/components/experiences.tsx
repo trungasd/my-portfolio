@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 "use client";
 
 import { experiencesData } from "@/lib/data";
@@ -8,9 +10,8 @@ const Experiences = () => {
       <div className="container mx-auto text-center max-w-4xl">
         <h2 className="text-4xl font-bold text-gray-800 mb-10">Experience</h2>
         
-        {/* Timeline */}
         <div className="relative border-l border-gray-300 dark:border-gray-600 ml-6">
-          {experiencesData.map((exp, index) => (
+          {experiencesData.map((exp) => (
             <div key={exp.id} className="mb-10 ml-6">
               <div className="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full shadow-md">
                 <exp.icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />

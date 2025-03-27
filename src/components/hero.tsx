@@ -4,7 +4,6 @@ const Hero = () => {
   return (
     <section id="hero" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-24 py-16">
 
-      {/* Avatar */}
       <div className="flex items-center justify-center">
         <Image
           src={portrait}
@@ -12,13 +11,11 @@ const Hero = () => {
           className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
         />
       </div>
-
-      {/* Title & Description */}
       <h2 className="text-5xl font-bold text-gray-800 mt-4 mb-10  px-10">
-        Hello, I'm <span className="text-black">Trung</span>.
+        Hello, My name is <span className="text-black">Trung</span>.
       </h2>
       <p className="text-2xl font-normal text-gray-600 mt-4 mb-10  px-10">
-        I'm a passionate frontend developer with a strong focus on building
+        Im a passionate frontend developer with a strong focus on building
         interactive and user-friendly web applications. I specialize in React,
         Next.js, and modern web technologies.
       </p>
