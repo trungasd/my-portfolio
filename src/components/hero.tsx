@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Buttons */}
       <div className="items-center justify-center mt-4 mb-10  px-10">
         <a
-          href="/resume.pdf"
+          href="/CV-HoHuynhTrung-GameDeveloper.pdf"
           download
           className="bg-white border border-gray-300 text-gray-800 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md"
         >
