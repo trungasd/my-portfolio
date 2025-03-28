@@ -12,10 +12,10 @@ const Hero = () => {
         />
       </div>
       <h2 className="text-5xl font-bold text-gray-800 mt-4 mb-10  px-10">
-        Hello, My name is <span className="text-black">Trung</span>.
+        Hello, I am <span className="text-black">Trung</span>.
       </h2>
       <p className="text-2xl font-normal text-gray-600 mt-4 mb-10  px-10">
-        Im a passionate frontend developer with a strong focus on building
+        I am a passionate frontend developer with a strong focus on building
         interactive and user-friendly web applications. I specialize in React,
         Next.js, and modern web technologies.
       </p>
