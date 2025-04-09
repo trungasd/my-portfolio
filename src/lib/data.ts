@@ -6,7 +6,6 @@ import prjSell from "@/images/projectSell.jpg"
 import prjBand from "@/images/projectBand.jpg"
 import prjBoiss from "@/images/gameboiss44.png";
 import prjRun from "@/images/gamerunpng.png"
-import { img } from "framer-motion/client";
 
 export const links = [
   {
