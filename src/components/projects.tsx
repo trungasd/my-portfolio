@@ -66,7 +66,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
                   >
-                    XEM THÊM
+                    SEE MORE
                   </a>
                 </div>
               </div>

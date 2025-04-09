@@ -79,20 +79,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    id: 4,
-    img: prjRun,
-    title: "Running Game App",
-    description: "Developer an app game.",
-    tech: ["Unity", "C#", "Animation", "Audio", "OOP"],
-    link: "https://huynhtrung.itch.io/rungame",
-  },
-  {
     id: 5,
     img: prjBoiss,
     title: "Boiss44 Game App",
-    description: "Developer an app game.",
+    description: "Game application to control character to shoot Boss.",
     tech: ["Unity", "C#", "Animation ", "Audio", "Game Logic", "OOP", "Debugging"],
     link: "https://huynhtrung.itch.io/boiss4425",
+  },
+  {
+    id: 4,
+    img: prjRun,
+    title: "Running Game App",
+    description: "Game application to controll characters running and avoiding obstacles.",
+    tech: ["Unity", "C#", "Animation", "Audio", "OOP"],
+    link: "https://huynhtrung.itch.io/rungame",
   },
   {
     id: 1,
