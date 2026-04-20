@@ -2,6 +2,7 @@ import Image from "next/image";
 import portrait from "@/images/chandung.jpg";
 import { FaFacebookSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
+import { SiZalo } from "react-icons/si";
 
 const Hero = () => {
   return (
@@ -36,15 +37,27 @@ const Hero = () => {
         </a>
         <a
           href="https://www.facebook.com/huynhtrunq.1711"
-          className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-[#1877F2] hover:bg-gray-100 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 dark:hover:text-blue-400"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FaFacebookSquare />
         </a>
+
+        <a
+          href="https://zalo.me/0902849348"
+          className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-[#0068ff] hover:bg-gray-100 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 dark:hover:text-blue-400"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SiZalo />
+        </a>
+
         <a
           href="https://www.linkedin.com/in/huynhtrung03/"
-          className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-[#0A66C2] hover:bg-gray-100 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 dark:hover:text-blue-300"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <BsLinkedin />
         </a>
