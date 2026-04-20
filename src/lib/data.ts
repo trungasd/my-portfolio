@@ -1,11 +1,14 @@
 //src/lib/data.ts
 
-import { FaGraduationCap, FaBriefcase} from "react-icons/fa";
-import prjLdP from "@/images/projectLP.png"
-import prjSell from "@/images/projectSell.jpg"
-import prjBand from "@/images/projectBand.jpg"
+import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
+import prjLdP from "@/images/projectLP.png";
+import prjSell from "@/images/projectSell.jpg";
+import prjBand from "@/images/projectBand.jpg";
 import prjBoiss from "@/images/gameboiss44.png";
-import prjRun from "@/images/gamerunpng.png"
+import prjRun from "@/images/gamerunpng.png";
+import prjCar from "@/images/projectCar.png";
+import { title } from "process";
+import { i, img, p } from "framer-motion/client";
 
 export const links = [
   {
@@ -35,8 +38,8 @@ export const links = [
 ] as const;
 
 export const aboutData = [
-  "I'm a developer with a strong foundation in web development who has recently transitioned into the exciting world of game development. With experience in building interactive and responsive web applications using technologies like JavaScript and React, I've discovered my true passion lies in crafting engaging game experiences using Unity and C#.",
-  "Now, I'm focusing on creating 2D and 3D games that blend creativity, interactivity, and gameplay mechanics. I enjoy bringing ideas to life—from prototyping mechanics to polishing game levels and UI. I'm currently building a portfolio of Unity projects to showcase my skills and creativity as a game developer. I'm eager to join a team where I can learn, grow, and contribute to meaningful game projects.",
+  "I'm a Frontend Developer with hands-on experience in building responsive and user-friendly web applications using ReactJS and Vue.js. Strong understanding of RESTful API integration and modern UI development. Seeking an opportunity to contribute to a dynamic team while continuously improving technical and problem-solving skills",
+  "Passionate about creating seamless user experiences and eager to learn new technologies in the ever-evolving field of web development.",
 ] as const;
 
 export const skillsData = [
@@ -47,13 +50,13 @@ export const skillsData = [
   "TypeScript",
   "React",
   "Next.js",
+  "Vue.js",
   "Tailwind CSS",
+  "Bootstrap",
   "SCSS",
   "MongoDB",
   "SQL Server",
   "Node.js",
-  "ASP.NET",
-  "Unity",
 ] as const;
 
 export const experiencesData = [
@@ -64,7 +67,7 @@ export const experiencesData = [
     description:
       "I graduated from college with a bachelor's degree in Software Engineering.",
     icon: FaGraduationCap,
-    date: "2021-2024"
+    date: "2021-2024",
   },
   {
     id: 2,
@@ -75,24 +78,26 @@ export const experiencesData = [
     icon: FaBriefcase,
     date: "05/2024-08/2024",
   },
-] as const
+  {
+    id: 3,
+    title: "Freelance Frontend Web Developer",
+    location: "Remote",
+    description:
+      "I work as a freelance frontend developer, developed a car marketplace website for showcasing and selling vehicles. Integrated RESTful APIs and handled asynchronous data fetching.",
+    icon: FaBriefcase,
+    date: "04/2025-7/2025",
+  },
+] as const;
 
 export const projectsData = [
   {
-    id: 5,
-    img: prjBoiss,
-    title: "Boiss44 Game App",
-    description: "Game application to control character to shoot Boss.",
-    tech: ["Unity", "C#", "Animation ", "Audio", "Game Logic", "OOP", "Debugging"],
-    link: "https://huynhtrung.itch.io/boiss4425",
-  },
-  {
-    id: 4,
-    img: prjRun,
-    title: "Running Game App",
-    description: "Game application to controll characters running and avoiding obstacles.",
-    tech: ["Unity", "C#", "Animation", "Audio", "OOP"],
-    link: "https://huynhtrung.itch.io/rungame",
+    id: 6,
+    img: prjCar,
+    title: "Car Marketplace Web",
+    description:
+      "A car marketplace website for showcasing and selling vehicles. Integrated RESTful APIs and handled asynchronous data fetching.",
+    tech: ["Vue.js", "Bootstrap"],
+    link: "https://dev.sellcarintl.com/home",
   },
   {
     id: 1,
@@ -106,7 +111,8 @@ export const projectsData = [
     id: 2,
     img: prjLdP,
     title: "Landing Page Web",
-    description: "Developed a landing page for IEC Group to showcase their services and products.",
+    description:
+      "Developed a landing page for IEC Group to showcase their services and products.",
     tech: ["ReactJS", "Node.js", "MongoDB", "Express"],
     link: "https://github.com/trungasd/LandingPage",
   },
@@ -118,5 +124,29 @@ export const projectsData = [
     tech: ["HTML", "CSS", "C#", "ASP.NET", "SQL Server"],
     link: "https://github.com/trungasd/WebTheBand",
   },
-] as const
-
+  {
+    id: 4,
+    img: prjRun,
+    title: "Running Game App",
+    description:
+      "Game application to controll characters running and avoiding obstacles.",
+    tech: ["Unity", "C#", "Animation", "Audio", "OOP"],
+    link: "https://huynhtrung.itch.io/rungame",
+  },
+  {
+    id: 5,
+    img: prjBoiss,
+    title: "Boiss44 Game App",
+    description: "Game application to control character to shoot Boss.",
+    tech: [
+      "Unity",
+      "C#",
+      "Animation ",
+      "Audio",
+      "Game Logic",
+      "OOP",
+      "Debugging",
+    ],
+    link: "https://huynhtrung.itch.io/boiss4425",
+  },
+] as const;

@@ -21,14 +21,14 @@ const Hero = () => {
       </h2>
       <p className="text-2xl font-normal text-gray-600 mt-4 mb-10  px-10">
         Welcome to my portfolio! This is where I share my journey into
-        development, including my skills, projects, and what I&apos;ve learned along
-        the way.
+        development, including my skills, projects, and what I&apos;ve learned
+        along the way.
       </p>
 
       {/* Buttons */}
       <div className="flex items-center justify-center mt-4 mb-10  px-10">
         <a
-          href="/CV-HoHuynhTrung-GameDeveloper.pdf"
+          href="/CV_Ho_Huynh_Trung_Frontend_Developer.pdf"
           download
           className="bg-white border border-gray-300 text-gray-800 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md"
         >
