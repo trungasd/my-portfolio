@@ -7,8 +7,6 @@ import prjBand from "@/images/projectBand.jpg";
 import prjBoiss from "@/images/gameboiss44.png";
 import prjRun from "@/images/gamerunpng.png";
 import prjCar from "@/images/projectCar.png";
-import { title } from "process";
-import { i, img, p } from "framer-motion/client";
 
 export const links = [
   {
