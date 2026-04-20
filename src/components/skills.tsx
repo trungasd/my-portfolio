@@ -5,13 +5,14 @@ import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
 
 const Skills = () => {
-  
-    return (
-      <section id="skills" className="mb-28 text-center scroll-mt-24 py-16">
+  return (
+    <section id="skills" className="mb-28 text-center scroll-mt-24 py-16">
       <div className="container mx-auto text-center max-w-4xl">
-        <h2 className="text-4xl font-bold mb-6 text-gray-800 mb-10">My Skills</h2>
-        
-        <motion.div 
+        <h2 className="text-4xl font-bold mb-6 text-gray-800 mb-10">
+          My Skills
+        </h2>
+
+        <motion.div
           className="flex flex-wrap justify-center gap-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,8 +34,7 @@ const Skills = () => {
         </motion.div>
       </div>
     </section>
-    );
-  };
-  
-  export default Skills;
-  
+  );
+};
+
+export default Skills;

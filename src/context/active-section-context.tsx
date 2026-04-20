@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState} from "react";
+import { createContext, useContext, useState } from "react";
 
 type ActiveSectionContextType = {
   activeSection: string;
@@ -10,7 +10,7 @@ type ActiveSectionContextType = {
 };
 
 const ActiveSectionContext = createContext<ActiveSectionContextType | null>(
-  null
+  null,
 );
 
 export function ActiveSectionProvider({
@@ -39,7 +39,7 @@ export function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
   if (!context) {
     throw new Error(
-      "useActiveSectionContext must be used within an ActiveSectionProvider"
+      "useActiveSectionContext must be used within an ActiveSectionProvider",
     );
   }
   return context;

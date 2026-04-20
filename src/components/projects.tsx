@@ -6,10 +6,7 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="mb-28 text-center scroll-mt-24 py-16"
-    >
+    <section id="projects" className="mb-28 text-center scroll-mt-24 py-16">
       <div className="container mx-auto text-center max-w-6xl px-4">
         <h2 className="text-4xl font-bold mb-6 text-gray-800">My Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
@@ -25,7 +22,6 @@ const Projects = () => {
             >
               {/* Container lật */}
               <div className="relative h-70 md:w-96 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-
                 {/* Mặt trước */}
                 <div className="absolute inset-0 rounded-xl shadow-lg bg-white [backface-visibility:hidden]">
                   <div className="relative w-full h-full">
