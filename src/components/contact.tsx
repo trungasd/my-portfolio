@@ -1,58 +1,85 @@
 "use client";
 
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
 import SubmitBtn from "./submit-btn";
 import useContactForm from "@/email/use-contact-form";
 
-const Contact = () => {
+export default function Contact() {
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
   const { formData, handleChange, handleSubmit, isSending, successMessage } =
     useContactForm();
-  return (
-    <section
-      id="contact"
-      className="mb-28 text-center scroll-mt-24 py-16 px-4 sm:px-8 lg:px-16"
-    >
-      <div className="container mx-auto text-center max-w-6xl px-4">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
-          Contact Me
-        </h2>
-        <p className="text-sm sm:text-base mb-5">
-          Please contact me directly at{" "}
-          <a className="text-blue-600" href="mailto:hohuynhtrung2003@gmail.com">
-            hohuynhtrung2003@gmail.com
-          </a>{" "}
-          or contact this form.
-        </p>
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-4 rounded-lg p-4 sm:p-6 md:p-8 bg-gray-100 shadow-md"
-        >
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black-900"
-            placeholder="Your email"
-            required
-            maxLength={500}
-          />
-          <textarea
-            className="w-full h-40 sm:h-48 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black-500"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Your message"
-            required
-            maxLength={5000}
-          />
-          <SubmitBtn isSending={isSending} />
-        </form>
-        {successMessage && (
-          <p className="mt-3 text-green-600">{successMessage}</p>
-        )}
-      </div>
-    </section>
-  );
-};
 
-export default Contact;
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Contact");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
+
+  return (
+    <motion.section
+      id="contact"
+      ref={ref}
+      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center mx-auto scroll-mt-28"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-medium capitalize mb-4">Contact Me</h2>
+
+      <p className="text-gray-700 -mt-2 dark:text-white/80">
+        Please contact me directly at{" "}
+        <a
+          className="underline font-semibold hover:text-blue-600 transition"
+          href="mailto:hohuynhtrung2003@gmail.com"
+        >
+          hohuynhtrung2003@gmail.com
+        </a>{" "}
+        or through this form.
+      </p>
+
+      <form
+        className="mt-10 flex flex-col dark:text-black"
+        onSubmit={handleSubmit}
+      >
+        <input
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none shadow-sm"
+          name="email"
+          type="email"
+          required
+          maxLength={500}
+          placeholder="Your email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <textarea
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none shadow-sm"
+          name="message"
+          placeholder="Your message"
+          required
+          maxLength={5000}
+          value={formData.message}
+          onChange={handleChange}
+        />
+
+        <div className="flex flex-col items-center gap-2">
+          <SubmitBtn isSending={isSending} />
+
+          {successMessage && (
+            <motion.p
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="text-green-600 font-medium mt-2"
+            >
+              ✅ {successMessage}
+            </motion.p>
+          )}
+        </div>
+      </form>
+    </motion.section>
+  );
+}
